@@ -1,0 +1,160 @@
+#section1{
+    color: rgb(218, 218, 218);
+    font-size: 36px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    
+}
+.name{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 30px;
+
+}
+.name1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+}
+.section2{
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+}
+.section3{
+    color: #ffffff;
+    font-size: 24px;
+}
+.section4{
+    color: #721121;
+    text-align: center;
+}
+.section5{
+    color: #e2dfdf;
+    text-align: center;
+    font-size: 24px;
+}
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 28px;
+}
+.flex-layout{
+    display: flex;
+}
+.flex-layout div{
+    background-color: rgb(132, 147, 118);
+    margin: 1px;
+    text-align: center;
+    height: 50px;
+}
+.box{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    width: 500px;
+    height: 500px;
+}
+.box1{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 3px;
+    width: 500px;
+    height: 500px;
+}
+.edu{
+    color:rgb(76, 59, 38);
+    text-align: center;
+    font-size: 28px;
+}
+.lgradient{
+    background: linear-gradient(to right,rgb(0, 0, 0),rgb(132, 147, 118),rgb(146, 133, 116));
+}
+.lgradient1{
+    background: linear-gradient(to left,rgb(255, 255, 255),rgba(241, 241, 241),rgba(241, 241, 241));
+}     
+.twocolumns{
+    column-count: 2;
+    column-rule: 2px solid rgba(243, 235, 216);
+    text-align: center;
+}
+.border{
+    border-style: dashed;
+    border-color: rgb(243, 235, 216);
+    color:rgb(76, 59, 38);
+    background: linear-gradient(to right,rgb(243, 235, 216),rgb(197, 210, 189),rgb(132, 147, 118));
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: rgb(117, 119, 116);
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .menu li:hover {
+    background-color: rgb(96, 96, 95);
+  }
+  
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
