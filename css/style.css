@@ -7,7 +7,7 @@
 }
 #sec{
   color: rgb(9, 5, 3);
-  font-size: 36px;
+  font-size: 32px;
   text-align: center;
   background-color: rgb(249, 249, 249);
   
@@ -44,7 +44,7 @@
 a{
     color: rgb(256, 256, 256);
     text-decoration: none;
-    font-size: 28px;
+    font-size: 28 px;
 }
 .edu{
     color:rgb(0, 0, 0);
@@ -59,7 +59,7 @@ a{
 .box{
   color: rgb(255, 255, 255);
   background-color: rgb(249, 249, 249);
-  height: 500px;
+  height: 510px;
   max-width: 100%;
   padding: 30px;
   margin: 20% auto;
@@ -82,14 +82,14 @@ a{
 .box-3{
   color: rgb(255, 255, 255);
   background-color: rgb(220, 220, 220);
-  height: 500px;
+  height: 510px;
   max-width: 100%;
   padding: 30px;
 }
 .box-4{
   color: rgb(255, 255, 255);
   background-color: rgb(242, 242, 242);
-  height: 500px;
+  height: 510px;
   max-width: 100%;
   padding: 30px;
 }
@@ -110,14 +110,14 @@ a{
 .box1-2{
   color: rgb(0, 0, 0);
   background-color: rgb(61, 61, 61);
-  height: 500px;
+  height: 510px;
   max-width: 100%;
   padding: 30px;
 }
 .box1-3{
   color: rgb(0, 0, 0);
   background-color: rgb(33, 33, 33);
-  height: 500px;
+  height: 510px;
   max-width: 100%;
   padding: 30px;
 }
