@@ -136,26 +136,7 @@ a{
   max-width: 100%;
   padding: 20px;
   border: 1px solid #acacac;
-}
-.lgradient{
-    background: linear-gradient(to right,rgb(0, 0, 0),rgb(132, 147, 118),rgb(146, 133, 116));
-}
-.lgradient1{
-    background: linear-gradient(to left,rgb(255, 255, 255),rgba(241, 241, 241),rgba(241, 241, 241));
-}     
-.twocolumns{
-    column-count: 2;
-}
-.border{
-    border-style: dashed;
-    border-color: rgb(243, 235, 216);
-    color:rgb(76, 59, 38);
-    background: linear-gradient(to right,rgb(243, 235, 216),rgb(197, 210, 189),rgb(132, 147, 118));
-}
-* {
-    box-sizing: border-box;
-  }
-  
+} 
   .row::after {
     content: "";
     clear: both;
@@ -231,25 +212,3 @@ a{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
-/* Split the screen in half */
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-/* Control the left side */
-.left {
-  left: 0;
-  background-color: #ffffff;
-}
-
-/* Control the right side */
-.right {
-  right: 0;
-  background-color: rgb(0, 0, 0);
-}
