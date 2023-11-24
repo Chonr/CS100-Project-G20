@@ -7,7 +7,7 @@
 }
 #sec{
   color: rgb(9, 5, 3);
-  font-size: 32px;
+  font-size: 30px;
   text-align: center;
   background-color: rgb(249, 249, 249);
   
@@ -44,7 +44,8 @@
 a{
     color: rgb(256, 256, 256);
     text-decoration: none;
-    font-size: 28 px;
+    font-size: 25px;
+    padding: 10px;
 }
 .edu{
     color:rgb(0, 0, 0);
@@ -172,13 +173,13 @@ a{
   
   .menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 5;
+    padding: 10;
   }
   
   .menu li {
     padding: 8px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     background-color: rgb(51, 51, 51);
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
