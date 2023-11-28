@@ -27,7 +27,7 @@ function validateName() {
   }
 
   if (!fullnamePattern.test(fullnameInput.value)) {
-    errorElement.textContent = "Please enter the first letter in capital letter.";
+    errorElement.textContent = "Please enter both your Firstname and Lastname.";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
@@ -132,10 +132,6 @@ async function submitForm(event) {
 
   
 
-  /*var img=document.forms['myform']['img_upload'];
-  var validExt=["jpeg","png","jpg"];*/
-
-
   // Create the data object to send to the backend
   const formData = new FormData(event.target);
   const data = {
@@ -201,3 +197,60 @@ document
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
 
+// ฟังก์ชันสำหรับการ submit ฟอร์ม
+async function submitForm(event) {
+  event.preventDefault();
+
+  // รับข้อมูลจากฟอร์ม
+  const formData = new FormData(event.target);
+
+  // ดึงข้อมูลที่ต้องการ
+  
+  // ... (ดึงข้อมูลอื่นๆ ตามต้องการ) ...
+  const first_name = formData.get("fullname").split(" ")[0];
+  const last_name = formData.get("fullname").split(" ")[1];
+  const student_id = parseInt(formData.get("studentID"));
+  const faculty = parseInt(formData.get("faculty"));
+  const major = formData.get("major");
+  const email = formData.get("email");
+  const title = formData.get("workTitle");
+  const type_of_work_id = parseInt(formData.get("activityType"));
+  const academic_year = parseInt(formData.get("academicYear")) - 543;
+  const semester = parseInt(formData.get("semester"));
+  const start_date = formData.get("startDate");
+  const end_date = formData.get("endDate");
+  const location = formData.get("location");
+  const image = formData.get("file");
+  const description = formData.get("description");
+
+  // แสดงผลข้อมูลที่ Element ที่มีอยู่ในหน้าเว็บ
+  const resultContainer = document.getElementById("resultContainer");
+  resultContainer.innerHTML = `
+
+    <!-- ... (แสดงข้อมูลอื่นๆ ตามต้องการ) ... -->
+    <p>Firstname: ${first_name}</p>
+    <p>Lastname: ${last_name}</p>
+    <p>Student ID: ${student_id}</p>
+    <p>Faculty: ${faculty}</p>
+    <p>Major: ${major}</p>
+    <p>Email: ${email}</p>
+    <p>Work/Activity Title: ${title}</p>
+    <p>Type of Work ID: ${type_of_work_id}</p>
+    <p>Academic Year: ${academic_year}</p>
+    <p>Semester: ${semester}</p>
+    <p>Start Date/Time: ${start_date}</p>
+    <p>End Date/Time: ${end_date}</p>
+    <p>Location: ${location}</p>
+    <p>Image: ${image}</p>
+    <p>Description: ${description}</p>
+    
+  `;
+
+  // เพิ่ม Element สำหรับแสดงผล
+  const additionalResult = document.createElement("div");
+  additionalResult.innerHTML = `
+    
+    <!-- ... (แสดงข้อมูลอื่นๆ ตามต้องการ) ... -->
+  `;
+  resultContainer.appendChild(additionalResult);
+}
