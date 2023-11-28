@@ -206,7 +206,7 @@ async function submitForm(event) {
 
   // ดึงข้อมูลที่ต้องการ
   
-  // ... (ดึงข้อมูลอื่นๆ ตามต้องการ) ...
+
   const first_name = formData.get("fullname").split(" ")[0];
   const last_name = formData.get("fullname").split(" ")[1];
   const student_id = parseInt(formData.get("studentID"));
@@ -223,11 +223,37 @@ async function submitForm(event) {
   const image = formData.get("file");
   const description = formData.get("description");
 
-  // แสดงผลข้อมูลที่ Element ที่มีอยู่ในหน้าเว็บ
-  const resultContainer = document.getElementById("resultContainer");
-  resultContainer.innerHTML = `
 
-    <!-- ... (แสดงข้อมูลอื่นๆ ตามต้องการ) ... -->
+  // Get the file input element and extract the selected file
+  const fileInput = document.getElementById("fileInput");
+  const imageFile = fileInput.files[0];
+
+  // Check if an image file is selected and if it has a valid extension
+  if (imageFile && (imageFile.type === "image/jpeg" || imageFile.type === "image/png")) {
+    // Create a FileReader to read the selected image file
+    const reader = new FileReader();
+
+    // Define a callback function to be executed when the file is read
+    reader.onload = function (e) {
+      // Create an image element
+      const imageElement = document.createElement("img");
+
+      // Set the source of the image to the data URL obtained from reading the file
+      imageElement.src = e.target.result;
+
+      // Set any additional attributes or styles as needed
+      imageElement.alt = "Uploaded Image";
+
+      // Append the image element to the resultContainer
+      const resultContainer = document.getElementById("resultContainer");
+      resultContainer.innerHTML = ""; // Clear existing content
+      resultContainer.appendChild(imageElement);
+
+
+  // แสดงผลข้อมูลที่ Element ที่มีอยู่ในหน้าเว็บ
+  resultContainer.innerHTML += `
+
+    
     <p>Firstname: ${first_name}</p>
     <p>Lastname: ${last_name}</p>
     <p>Student ID: ${student_id}</p>
@@ -241,16 +267,18 @@ async function submitForm(event) {
     <p>Start Date/Time: ${start_date}</p>
     <p>End Date/Time: ${end_date}</p>
     <p>Location: ${location}</p>
-    <p>Image: ${image}</p>
     <p>Description: ${description}</p>
     
   `;
+};
 
-  // เพิ่ม Element สำหรับแสดงผล
-  const additionalResult = document.createElement("div");
-  additionalResult.innerHTML = `
-    
-    <!-- ... (แสดงข้อมูลอื่นๆ ตามต้องการ) ... -->
-  `;
-  resultContainer.appendChild(additionalResult);
+// Read the image file as a data URL
+reader.readAsDataURL(imageFile);
 }
+else {
+// Handle the case where no valid image file is selected
+alert("Please select a valid image file with .jpg or .png extension.");
+}
+}
+
+
