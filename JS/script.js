@@ -27,7 +27,7 @@ function validateName() {
   }
 
   if (!fullnamePattern.test(fullnameInput.value)) {
-    errorElement.textContent = "Please enter the first leter in capital letter.";
+    errorElement.textContent = "Please enter the first letter in capital letter.";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
