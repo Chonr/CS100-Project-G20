@@ -9,7 +9,7 @@
 const config = {
   // backendUrl: "http://54.179.42.49/", // Default backend URL
   // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
-  backendUrl: "http://http://localhost:80/", // Default backend URL
+  backendUrl: "http://localhost:80/", // Default backend URL
 };
 
 // Function to validate Firstname and Lastname
@@ -220,7 +220,6 @@ async function submitForm(event) {
   const start_date = formData.get("startDate");
   const end_date = formData.get("endDate");
   const location = formData.get("location");
-  const image = formData.get("file");
   const description = formData.get("description");
 
 
@@ -276,8 +275,8 @@ async function submitForm(event) {
 reader.readAsDataURL(imageFile);
 }
 else {
-// Handle the case where no valid image file is selected
-alert("Please select a valid image file with .jpg or .png extension.");
+
+alert("Failed to submit form data. Please try again.");
 }
 }
 
