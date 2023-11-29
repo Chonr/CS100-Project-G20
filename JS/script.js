@@ -253,7 +253,7 @@ async function submitForm(event) {
   // แสดงผลข้อมูลที่ Element ที่มีอยู่ในหน้าเว็บ
   resultContainer.innerHTML += `
 
-    
+    <br>
     <p>Firstname: ${first_name}</p>
     <p>Lastname: ${last_name}</p>
     <p>Student ID: ${student_id}</p>
